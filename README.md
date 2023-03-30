@@ -43,3 +43,43 @@ ICS is an end-to-end integration orchestration platform that simplifies how to u
 
 For a regular purchase order return, you can return goods to either receiving or the supplier. For a drop ship purchase order return, you can only return goods to the supplier. You cannot return goods to receiving.
 
+
+##**Pick Waves and Release Rules**
+
+https://docs.oracle.com/en/cloud/saas/supply-chain-management/22d/famlo/pick-waves.html#s20032063
+
+
+##**Shipping Orders**
+
+**Sales order** the orchestration document that represents the demand and supply for items. Sales order lines can be picked, packed, and shipped. Transfer order. This represents the demand and supply for an internal material transfer. Transfer order lines are similar to sales order lines. They can be picked, packed, and shipped.
+
+**Return transfer order** This is a transfer order with the return transaction. The return is performed against the original transfer order. The price and tax for a return transaction order is derived in Oracle Fusion Receiving. Outside processing order. This order is where one or more operations of the work order are outsourced to a supplier who provides specialized manufacturing services. Such work orders are created and released within the Oracle Manufacturing Cloud Solution.
+
+**Return to supply order** A return to supply order is a demand document for shipping items back to a supplier from a fully or partially received purchase order to receive credit for the items. Return to a supplier orders are generated as a result for a return transaction initiated in Oracle Fusion Receiving.
+
+**Dropship order** This is an order where material flows directly from a supplier or contract manufacturer to the customer. The seller relies on the supplier or contract manufacturer to build, store, and ship products to the customer. A dropship purchase order is placed with the supplier, along with instructions to describe how to ship the items, and then the supplier ships directly to the customer.
+
+**Return material authorization** An RMA is a return order used by the customer to return items back to your company. The return is performed against the original sales order. Let's dig a little deeper into the RMA. Here are some values that can be used as the return type for the RMA.
+
+**Cancel the item** Use this value to cancel an item that does not include a shipment. For example, a contract for a wireless phone service typically does not include a shipment. So your customer can't physically return it, but you can cancel it.
+
+**Return for credit** Use this value for an item that your customer can't return or your customer didn't receive the shipment. For example, your customer received the item, but it's severely damaged. 
+
+**Return for credit and return item** Use this value for an item that your customer must return. For example, you customer received an incorrect item from the manufacturer and wants reimbursement. When the manufacturer receives the returned item, the manufacturer issues a credit memo to the customer. 
+
+**Return for repair.** Use this value for your item, your customer request repair.
+
+Transfer order processing is integrated with Oracle Fusion Shipping. You can pick, pack, and ship transfer order lines and shipping. You can also generate shipping documents for a transfer order. Supply Chain Orchestration rules affect transfer order processing when integrating with shipping.
+
+These rules determines if a transfer order is routed directly through Oracle Fusion Shipping or through Oracle Fusion Order Management. Shippable transfer order lines are interfaced to shipping directly from the Transfer Order pages in Oracle Fusion Inventory Management.
+
+Oracle Fusion Shipping plays a key role in **transfer order processing**. Let's review the parameters that are important components of the transfer order and shipping integration. 
+
+- Shipping can generate shipping documentation for transfer order lines. 
+- A transfer order line initially maps to one shipment line.
+- Ship Confirm updates the shipped quantity on transfer order lines. 
+- Shipping can accept a shipment line with internal locations for ship to locations. 
+- Shipping validates the updates of shipping-relevant attributes on transfer orders.
+- Lines for return transfer orders are treated similar to the ones in the original transfer order, but are identified separately, with an order type of return transfer order. 
+- Transfer orders that do not require a physical return or of materials are not interface to shipping. 
+- Shipping can generate transfer order shipping costs records to pass to costing.
