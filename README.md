@@ -33,13 +33,13 @@ You may choose to fulfill drop shipment orders due to a lack of warehouse availa
 
 Then, the supplier ships the product directly to the customer. The shipping manager can still print the packing slips, bill of lading, and commercial invoice for drop shipments, and shipping instructions can be sent manually to the supplier either with the shipping paperwork or by email. The supplier, in turn, sends the paperwork to the customer.
 
-**How can I send an ASN for a drop ship order? **
+**How can I send an ASN for a drop ship order?**
 
 A customer advance shipping notice, otherwise known as an ASN, is created when the warehouse manager or supplier creates an ASN for a drop ship order. You can send this ASN to the customer using Integrated Cloud Service Integration or Business-to-business Messaging using Oracle Collaboration Messaging Framework which is providing the customer has enabled it.
 
 ICS is an end-to-end integration orchestration platform that simplifies how to use and apply product integrations offered within the Cloud. Oracle Fusion Collaboration Messaging Framework provides the ability to manage business-to-business communication with a large number of suppliers.
 
-**What's the difference between a purchase order return and a drop ship purchase order return? **
+**What's the difference between a purchase order return and a drop ship purchase order return?**
 
 For a regular purchase order return, you can return goods to either receiving or the supplier. For a drop ship purchase order return, you can only return goods to the supplier. You cannot return goods to receiving.
 
