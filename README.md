@@ -49,7 +49,7 @@ For a regular purchase order return, you can return goods to either receiving or
 https://docs.oracle.com/en/cloud/saas/supply-chain-management/22d/famlo/pick-waves.html#s20032063
 
 
-##**Shipping Orders**
+## **Shipping Orders**
 
 **Sales order** the orchestration document that represents the demand and supply for items. Sales order lines can be picked, packed, and shipped. Transfer order. This represents the demand and supply for an internal material transfer. Transfer order lines are similar to sales order lines. They can be picked, packed, and shipped.
 
@@ -73,7 +73,8 @@ Transfer order processing is integrated with Oracle Fusion Shipping. You can pic
 
 These rules determines if a transfer order is routed directly through Oracle Fusion Shipping or through Oracle Fusion Order Management. Shippable transfer order lines are interfaced to shipping directly from the Transfer Order pages in Oracle Fusion Inventory Management.
 
-Oracle Fusion Shipping plays a key role in **transfer order processing**. Let's review the parameters that are important components of the transfer order and shipping integration. 
+### **Oracle Fusion Shipping Transfer Order Processing**
+Oracle Fusion Shipping plays a key role in transfer order processing. Below are the parameters that are important components of the transfer order and shipping integration:
 
 - Shipping can generate shipping documentation for transfer order lines. 
 - A transfer order line initially maps to one shipment line.
